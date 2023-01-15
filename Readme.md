@@ -5,13 +5,21 @@ Analysis by Jonas Pertschy
 `tl;dr.` Backdating GitHub commits is a way to make a GitHub profile look more active. Commits should not be trusted as a measure of actual activity, as their timestamps can be easily 
 spoofed and backdated.
 
-## gitfiti
+
+## gitfiti execution flow and analysis
 According to the project description, gitfiti is a noun and stands for carefully crafted graffiti in a GitHub commit history graph.
 
 The project is hosted on GitHub and can be found [here](https://github.com/gelstudios/gitfiti). Gitfiti is creating graphics on GitHub profiles by backdating commits.
 
 The project is written in Python and is a single script that can create commits with arbitrary dates. The script analyses the GitHub history of an account and then creates as many 
 commits as needed to display bitmap art on the GitHub profile page.
+
+## Artifacts created by gitfiti
+![Gitfiti contributions](artifact-1.png)
+- Figure 1: Gitfiti contributions. After executing gitfiti on a GitHub account, the profile page will show a lot of contributions. The contributions are actually backdated commits, performed in 2023 and not 2022.
+
+![History](artifact-2.png)
+- Figure 2: History. The history of the account shows the backdated commits as false activity.
 
 The Python script creates a Bash or PowerShell script based on the following two templates:
 
